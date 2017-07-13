@@ -299,8 +299,8 @@ INSERT INTO p2.PhoneType(Text)
 INSERT INTO p2.DriverStatus(Text)
 	VALUES	('Inactive'),
 			('Off work'),
-			('Working – available'),
-			('Working – with a customer');
+			('Working Â– available'),
+			('Working Â– with a customer');
 
 INSERT INTO p2.Color(Text)
 	VALUES	('Red'),
@@ -738,7 +738,7 @@ AS
 						ON cm.CarModelID = cmy.CarModelID
 				INNER JOIN p2.CarCapacity cc
 						ON cc.CarCapacityID = cm.CarCapacity
-				WHERE ds.Text = 'Working – available' 
+				WHERE ds.Text = 'Working Â– available' 
 				  AND cc.PassengerCapacity >= @NumberOfPassengers
 				  AND cc.LuggageCapacity >= @NumberOfBags
 		RETURN @result
@@ -781,7 +781,7 @@ AS
 								ON cm.CarModelID = cmy.CarModelID
 						INNER JOIN p2.CarCapacity cc
 								ON cc.CarCapacityID = cm.CarCapacity
-						WHERE ds.Text = 'Working – available'
+						WHERE ds.Text = 'Working Â– available'
 							AND cc.PassengerCapacity >= @NumberOfPassengers
 							AND cc.LuggageCapacity >= @NumberOfBags) = 0
 			PRINT 'Sorry! Currently, We have no cars available satisfying your requirements.'
@@ -817,7 +817,7 @@ AS
 										ON cm.CarModelID = cmy.CarModelID
 								INNER JOIN p2.CarCapacity cc
 										ON cc.CarCapacityID = cm.CarCapacity
-								WHERE ds.Text = 'Working – available'
+								WHERE ds.Text = 'Working Â– available'
 								  AND cc.PassengerCapacity >= @NumberOfPassengers
 								  AND cc.LuggageCapacity >= @NumberOfBags
 
@@ -891,7 +891,7 @@ AS
 										ON cm.CarModelID = cmy.CarModelID
 								INNER JOIN p2.CarCapacity cc
 										ON cc.CarCapacityID = cm.CarCapacity
-								WHERE ds.Text = 'Working – available'
+								WHERE ds.Text = 'Working Â– available'
 								  AND cc.PassengerCapacity >= @NumberOfPassengers
 								  AND cc.LuggageCapacity >= @NumberOfBags	
 
